@@ -1,63 +1,67 @@
 class Person {
-    
+
+    _name;
+
     constructor(name, age){
-        this.name = name
+        this._name = name
         this.age = age
     }
 
     getName(){
-        return this.name;
+        return this._name;
     }
 
     getAge(){
         return this.age;
     }
 
-    getDescricao(){
+    getDescription(){
         // console.log('THIS:', this)
-        return `${this.name} tem ${this.age} e é ${this.profissao} do IFSP`;
+        return `${this.name} is ${this.age} years old and ${this.profissao} at the Institute`;
     }
 
 }
 
-class Profissional extends Person{
-    constructor(name, age, profissao){
+class Professional extends Person{
+    constructor(name, age, job){
         super(name, age)
-        this.profissao = profissao;
+        this.job = job;
     }
 
-    // setProfissao = function setPro(novaProfissao) {
-    //     this.profissao = novaProfissao
+    // setJob = function setPro(newJob) {
+    //     this.job = newJob
     // }
 
-    // setProfissao = (novaProfissao) => {
-    //     this.profissao = novaProfissao
+    // setJob = (newJob) => {
+    //     this.job = newJob
     // }
 
-    setProfissao(novaProfissao) {
-        this.profissao = novaProfissao
+    setJob(newJob) {
+        this.job = newJob
     }
 }
 
-// let person = new Person("Boto", 88, "terceirizado");
-// let person2 = new Person("Tiradenes", 63, "professor");
+let person = new Person("Boto", 88);
+// console.log(person.name)
+console.log(person.getName())
+// let person2 = new Person("Tiradenes", 63, "teacher");
 
-// person.setTipo("professor")
+// person.setTipo("teacher")
 
-// console.log(person.getDescricao())
-// console.log(person2.getDescricao())
+// console.log(person.getDescription())
+// console.log(person2.getDescription())
 // console.log(person.getName());
 // console.log(person.getAge());
 
 // let person1 = new Person("Saci", 33);
 
-let profissional = new Profissional("Julio", 36, "Analista de TI");
+let professional = new Professional("Julio", 36, "IT Analyst");
 
-// console.log(profissional)
+console.log(professional)
 
-// console.log(profissional.getName())
-console.log(profissional.getDescricao())
+// console.log(professional.getName())
+// console.log(professional.getDescription())
 
-profissional.setProfissao("professor")
+// professional.setJob("Teacher")
 
-console.log(profissional.getDescricao())
+// console.log(professional.getDescription())
